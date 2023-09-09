@@ -1,8 +1,11 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: ISS Documentation
+description: A modular self-driving system with minimal external library in Python.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+plugins:
+  - jekyll-default-layout
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+url: https://cas-lrj.github.io/iss-docs
+
+# aux_links:
+#   Template Repository: https://github.com/just-the-docs/just-the-docs-template
