@@ -2,20 +2,7 @@
 title: Sensors
 layout: home
 nav_order: 2
+has_children: true
 ---
 
-To-DO!!
-
-## CARLA Sensors
-
-### CARLA Camera
-
-### CARLA LiDAR
-
-### CARLA Radar
-
-### Supportive Class
-
-## BeamNG Sensors
-
-### BeamNG Camera
+We plan to implement sensor classes based on the data source, such as simulators like `CARLA` and `BeamNG` and real vehicles. In progress.
