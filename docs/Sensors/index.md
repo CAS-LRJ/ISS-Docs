@@ -5,4 +5,4 @@ nav_order: 2
 has_children: true
 ---
 
-We plan to implement sensor classes based on the data source, such as simulators like `CARLA` and `BeamNG` and real vehicles. In progress.
+Sensor classes based on the data source, such as simulators like `CARLA` and `BeamNG` and real vehicles. In progress.
