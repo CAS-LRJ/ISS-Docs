@@ -4,33 +4,59 @@ layout: home
 nav_order: 1
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# ISS
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+ISCAS Self-driving System (ISS) is a modular framework written in Python and C++. The aim for this framework is to build a extensible framework for research propose. This framework will contain both classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal external library can provide a transparent and clean workspace for researchers to evaluate ADS alogirhtms.
 
-More specifically, the created site:
+## Dependencies
+Here we list the minimal dependencies required by ISS and optional libraries recommonded. Also, some examples will be written in Jupyter Notebook.
+### Minimal Dependencies
+```bash
+carla=0.9.13
+cython=0.29.36
+lanelet2=1.2.1 (manylinux)
+networkx=3.1
+numpy=1.24.3
+open3d=0.17.0
+opencv-python=4.8.0.76
+pytorch=1.13.1
+scikit-learn=1.3.0
+```
+### Optional Dependencies
+```bash
+matplotlib=3.5.3
+pandas=2.0.3
+dubins=1.0.1
+commonroad-io=2022.3
+commonroad-route-planner=2022.3
+commonroad-scenario-designer=0.6.1
+commonroad-vehicle-models=3.0.2
+```
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+## Build
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+Run following command to build the project:
+```bash
+python setup.py build_ext --inplace
+```
+We suggest using virtual environment under Windows system. Cython 3.0.0 is currently not supported, so please use Cython 0.29.xx instead. 0.29.{33, 36} are tested. For simulators' version control, we are currently using **CARLA 0.9.13** and **BeamNG 0.27.2.0**, therefore you should use **carla==0.9.13** and **beamngpy==1.25.1** in your virtual enviroment.
 
-To get started with creating a site, simply:
+**Cautious**: Microsoft Visual C++ 14.0 or greater is required. To compile this project locally, you should have *visual-cpp-build-tools* pre-installed.
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+## Run tasks
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+### CARLA Data Collector
 
-----
+Run following command to collect various kinds of sensor data from CARLA:
+```bash
+python run_carla.py
+```
+Make sure the CARLA 0.9.13 Server is opened before execution of `run_carla.py`. Data will be saved in `resources/data/carla`, which can be changed by modifying `{RAW_DATA, DATASET}_PATH`.
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+## Current Release
+### 1.0.0 Alpha
+- Add Carla Sensors
+- Add Lanelet2 Global Planner and Frenet Optimal Trajectory (Lattice)
+- Initial Design of DataExchange Objects
+- Add miscellaneous utilities
