@@ -9,7 +9,7 @@ Sensors for interaction between ISS and BeamNG.
 ## BeamNG Sensors
 {: .d-inline-block }
 
-WIP
-{: .label }
+(WIP)
+{: .label .label-blue}
 
 BeamNG sensor is currently WIP.

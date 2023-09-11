@@ -9,7 +9,7 @@ Sensors for interaction between ISS and CARLA.
 
 
 ## CarlaSensor<a name="Sensor"></a>
-<small style="display:block;margin-top:-20px;">Inherited from _CarlaActor_</small></br>
+<small style="display:block;margin-top:-10px;">Inherited from _CarlaActor_</small></br>
 Sensors compound a specific family of actors quite diverse and unique. They are normally spawned as attachment/sons of a vehicle (take a look at [carla.World](#carla.World) to learn about actor spawning). Sensors are thoroughly designed to retrieve different types of data that they are listening to. 
 
   Most sensors can be divided in two groups: those receiving data on every tick (cameras, point clouds and some specific sensors) and those who only receive under certain circumstances (trigger detectors). CARLA provides a specific set of sensors and their blueprint can be found in [carla.BlueprintLibrary](#carla.BlueprintLibrary). 
