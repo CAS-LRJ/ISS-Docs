@@ -7,6 +7,7 @@ nav_order: 2
 Sensors for interaction between ISS and BeamNG. 
 
 ## BeamNG Sensors
+{: .d-inline-block }
 
 WIP
 {: .label }
