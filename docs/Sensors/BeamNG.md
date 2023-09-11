@@ -10,3 +10,5 @@ Sensors for interaction between ISS and BeamNG.
 
 WIP
 {: .label }
+
+BeamNG sensor is currently WIP.
