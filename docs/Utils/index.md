@@ -161,8 +161,16 @@ Classes and functions that are used to proceed mathematical operations.
 - `calculate_rot_angle(dir)`: convert a rotation matrix into an angle
 
 ### Cubic Spline
+{: .d-inline-block }
+
+(WIP)
+{: .label .label-blue}
 
 ### Quartic/Quintic Polynomial
+{: .d-inline-block }
+
+(WIP)
+{: .label .label-blue}
 
 ## SensorUtils
 
