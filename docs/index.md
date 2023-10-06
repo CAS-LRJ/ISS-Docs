@@ -11,13 +11,13 @@ ISCAS Self-driving System (ISS) is a modular framework written in Python and C++
 A demo showing the car following:
 
 <video width="640" height="360" controls>
-  <source src="/assets/following_1.mp4" type="video/mp4">
+  <source src="assets/following_1.mp4" type="video/mp4">
 </video>
 
 A demo showing the local motion planning:
 
 <video width="640" height="360" controls>
-  <source src="/assets/local_planning.mp4" type="video/mp4">
+  <source src="assets/local_planning.mp4" type="video/mp4">
 </video>
 
 
