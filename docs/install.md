@@ -6,12 +6,12 @@ nav_order: 1
 
 # ISS
 
-ISCAS Self-driving System (ISS) is a modular framework written in Python and C++. The aim for this framework is to build a extensible framework for research propose. This framework will contain both classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal external library can provide a transparent and clean workspace for researchers to evaluate ADS alogirhtms.
+Intelligent Self-driving System (ISS) is a modular framework written in Python and C++. The aim for this framework is to build a extensible framework for research propose. This framework will contain both classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal external library can provide a transparent and clean workspace for researchers to evaluate ADS alogirhtms.
 
 ## Dependencies
 Here we list the minimal dependencies required by ISS and optional libraries recommonded. Also, some examples will be written in Jupyter Notebook.
 ### Minimal Dependencies
-```bash
+```yaml
 carla=0.9.13
 cython=0.29.36
 lanelet2=1.2.1 (manylinux)
@@ -23,7 +23,7 @@ pytorch=1.13.1
 scikit-learn=1.3.0
 ```
 ### Optional Dependencies
-```bash
+```yaml
 matplotlib=3.5.3
 pandas=2.0.3
 dubins=1.0.1
