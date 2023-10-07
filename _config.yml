@@ -5,8 +5,13 @@ theme: just-the-docs
 
 plugins:
   - jekyll-default-layout
+  - jekyll/scholar
 
 url: https://cas-lrj.github.io/iss-docs
+
+scholar:
+  style: apa
+  source: ./_bibliography
 
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
