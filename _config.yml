@@ -1,7 +1,7 @@
 title: ISS Documentation
 description: A modular self-driving system with minimal external library in Python.
 theme: just-the-docs
-source: docs/
+# source: docs/
 
 plugins:
   - jekyll-default-layout
