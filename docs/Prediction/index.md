@@ -82,6 +82,7 @@ Simpler models lack the nuance needed for complex environments. The Motion Trans
 3. Collect, process datasets, and conduct training and simulation tests.
 4. Integrate into the current pipeline and ensure ongoing model optimization.
 
+
 ## References
 <ol>
     <li id="ref1">Schöller C, Aravantinos V, Lay F, et al. What the constant velocity model can teach us about pedestrian motion prediction[J]. IEEE Robotics and Automation Letters, 2020, 5(2): 1696-1703.</li>
