@@ -10,4 +10,15 @@ nav_order: 3
 (WIP)
 {: .label .label-blue}
 
-We are now directly invoking the groundtruth perception data(such as `Location`, `BoundingBox`, etc.) from simulators for downstream modules and tasks to use. We are introducing multiple algorithms of different sensor data types like RGB camera and LiDAR. In progress.
+ISS perception module includes 3D obstacle perception, 2D object recognition, 2D semantic segmentation, and sensor-based Bird's Eye View (BEV) map generation. Our team is focused on developing and refining these critical perception tasks. These tasks serve as the foundation for enabling our vehicles to navigate complex environments with safety and precision. Below, we briefly outline each of these tasks:
+
+1. **3D Obstacle Perception**: Our system employs advanced sensor technologies to detect and analyze three-dimensional obstacles in real-time. This capability allows our autonomous vehicles to make informed decisions and ensure safe navigation, even in dynamic and challenging scenarios.
+
+2. **2D Object Recognition**: Recognizing and identifying objects in the vehicle's surroundings is crucial for safe navigation. Our framework utilizes cutting-edge algorithms to identify and classify various objects, such as pedestrians, vehicles, and signage, contributing to enhanced situational awareness.
+
+3. **2D Semantic Segmentation**: Semantic segmentation is an essential task for understanding the environment in detail. We leverage state-of-the-art techniques to partition the scene into meaningful segments, enabling our vehicles to comprehend the road layout and better respond to complex urban landscapes.
+
+4. **Sensor-Based BEV Map Generation**: Our system generates a Bird's Eye View (BEV) map using sensor data, providing a holistic view of the vehicle's surroundings. This map serves as a valuable tool for path planning and decision-making, enhancing the vehicle's ability to navigate efficiently and safely.
+
+
+At present, we are diligently working on these modules, and I am pleased to share that we have developed initial models for the first three tasks. However, it's important to note that these models are still undergoing refinement to enhance their performance and reliability. 
