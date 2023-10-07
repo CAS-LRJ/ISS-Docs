@@ -59,6 +59,13 @@ Two demos featuring physical minicars navigating indoor and outdoor environments
 A demo showcasing the A-LOAM SLAM algorithm using data from physical minicars
 {: .text-center}
 
-## Our Works
+<!-- ## Our Works
 
+Currently, we have leveraged components of the ISS for various tasks, including scene construction, autonomous driving safety verification, and adversarial attacks on perception models.
 
+<video width="640" height="360" controls>
+  <source src="assets/LeftCutInSmall.mp4" type="video/mp4">
+</video>
+{: .center-image }
+A simple left cut-in scenario built
+{: .text-center} -->
