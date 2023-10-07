@@ -9,7 +9,7 @@ math: mathjax
 ## Introduction to the Control Module
 The Control module is responsible for generating control commands to steer the vehicle and maintain its desired trajectory. In this documentation, we outline our current methodologies, from the simple PID controller to the more advanced Model Predictive Control (MPC).
 
-## 1. PID Controller for Waypoint Tracking
+## PID Controller for Waypoint Tracking
 
 ### Overview:
 The PID controller is one of the fundamental control algorithms in our autonomous driving pipeline. It continuously calculates an "error" value as the difference between a desired setpoint (in this case, waypoints) and the current vehicle position.
@@ -22,7 +22,7 @@ The PID controller is one of the fundamental control algorithms in our autonomou
 ### Application:
 We use the PID controller primarily for waypoint tracking, maintaining lane position, and ensuring the vehicle follows a predefined path with minimal deviation.
 
-## 2. Model Predictive Control (MPC) for Advanced Trajectory Tracking
+## Model Predictive Control (MPC) for Trajectory Tracking
 
 ### Overview:
 Model Predictive Control (MPC) is an advanced control technique that uses a model of the vehicle's dynamics to predict its future states over a defined horizon. At each time step, the MPC solves an optimization problem to find the optimal control inputs, considering vehicle dynamics, constraints, and the desired trajectory.

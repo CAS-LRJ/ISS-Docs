@@ -22,12 +22,12 @@ The constant velocity model is the most basic but effective method of prediction
 - **Limitations**: In urban or crowded areas, this model may not capture erratic movements of agents.
 
 ### Mathematical Model
-The primary equations governing the kinematic bicycle model are:
+![kine_bicycle_model](../../assets/kine_bicycle_model.png){: .center-image width="50%"}
 
-<figure>
-    <img src="/assets/kine_bicycle_model.png" alt="kine_bicycle_model" style="width: 70%;">
-    <figcaption>Kinematic bicycle model</figcaption>
-</figure>
+*Kinematic bicycle model*
+{: .text-center}
+
+The primary equations governing the kinematic bicycle model are:
 
 1. **Position updates**:
    
@@ -58,12 +58,12 @@ The RK4 method is then applied for forward simulation to improve prediction accu
 ## 2. Motion Transformer
 
 ### Overview
-The Motion Transformer is a state-of-the-art model that considers historical data to predict future trajectories.
+The Motion Transformer <a href="#ref1"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
 
-<figure>
-    <img src="/assets/motion_transformer.png" alt="Motion Transformer">
-    <figcaption>The structure of the motion transformer<a href="#ref2"><sup>[2]</sup></a></figcaption>
-</figure>
+![motion_transformer](../../assets/motion_transformer.png){: .center-image }
+
+*The structure of the motion transformer <a href="#ref1"><sup>[2]</sup></a>*
+{: .text-center}
 
 ### Why Motion Transformer?
 Simpler models lack the nuance needed for complex environments. The Motion Transformer accounts for historical trajectories, giving it an edge in intricate scenarios.
