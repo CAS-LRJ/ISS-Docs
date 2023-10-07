@@ -10,13 +10,13 @@ Sensor classes based on the data source, such as simulators like CARLA and BeamN
 Simulators like CARLA and BeamNG are powerful tools for sensor simulation, offering a range of sensor classes that mimic the behavior of real-world sensors. These simulators generate synthetic data, replicating the sensory input that an autonomous vehicle would receive while driving. The sensors commonly simulated in these environments include:
 
 1. **LiDAR (Light Detection and Ranging)**: Simulated LiDAR sensors emit laser beams and measure their reflection from surrounding objects, providing detailed 3D point clouds. These simulators replicate the physics of LiDAR, including beam divergence and range accuracy, allowing developers to evaluate their algorithms' performance in various scenarios.
-![carla_lidar_point_cloud](/assets/sensors/carla_lidar_point_cloud.jpg){: .center-image width="480"}
+![carla_lidar_point_cloud](../../assets/sensors/carla_lidar_point_cloud.jpg){: .center-image width="480"}
 
 1. **Radar**: Radar sensors use radio waves to detect objects and their relative speed. Simulated radar sensors emulate the radar signal's propagation and reflection, including effects like interference and attenuation, to generate realistic sensor data.
 ![carla_sensors_radar](../../assets/sensors/carla_sensors_radar.jpg){: .center-image width="480"}
 
 1. **Camera**: Simulated cameras replicate the behavior of vision sensors, including factors such as lens distortion, exposure, and image noise. These simulations enable the testing of computer vision algorithms for tasks like object detection, lane tracking, and traffic sign recognition.
-![carla_sensors_rgb](assets/sensors/carla_sensors_rgb.jpg){: .center-image width="480"}
+![carla_sensors_rgb](../../assets/sensors/carla_sensors_rgb.jpg){: .center-image width="480"}
 
 1. **GPS and IMU (Inertial Measurement Unit)**: Simulated GPS and IMU sensors provide vehicle localization and orientation data. These sensors simulate satellite signals and vehicle movements, allowing developers to assess GPS-based localization and sensor fusion algorithms.
 
