@@ -2,7 +2,7 @@
 title: Prediction
 layout: home
 nav_order: 8
-math: mathjax
+math: katex
 ---
 
 # Prediction
@@ -14,7 +14,7 @@ Prediction plays a pivotal role in autonomous driving, determining the probable 
 ## 1. Constant Velocity Motion Predictor
 
 ### Overview
-The constant velocity model is the most basic method of prediction, assuming an entity continues its current trajectory at a constant speed. Here, we forward simulate the kinematic bicycle model via Runge-Kutta 4 (RK4) integration, assuming no acceleration and steering angle.
+The constant velocity model is the most basic but effective method of prediction <a href="#ref1"><sup>[1]</sup></a>, assuming an entity continues its current trajectory at a constant speed. Here, we forward simulate the kinematic bicycle model via Runge-Kutta 4 (RK4) integration, assuming no acceleration and steering angle.
 
 
 ### Applicability and Limitations
@@ -22,22 +22,31 @@ The constant velocity model is the most basic method of prediction, assuming an 
 - **Limitations**: In urban or crowded areas, this model may not capture erratic movements of agents.
 
 ### Mathematical Model
+![kine_bicycle_model](../../assets/kine_bicycle_model.png){: .center-image width="50%"}
+
+*Kinematic bicycle model*
+{: .text-center}
+
 The primary equations governing the kinematic bicycle model are:
 
 1. **Position updates**:
-    \\[ x(t+1) = x(t) + v(t) \cos(\theta(t)) \Delta t \\]
-    \\[ y(t+1) = y(t) + v(t) \sin(\theta(t)) \Delta t \\]
+   
+    $$ x(t+1) = x(t) + v(t) \cos(\theta(t)) \Delta t $$
+
+    $$ y(t+1) = y(t) + v(t) \sin(\theta(t)) \Delta t $$
 
 2. **Heading update**:
-    \\[ \theta(t+1) = \theta(t) + \frac{v(t)}{L} \tan(\phi) \Delta t \\]
+   
+    $$ \theta(t+1) = \theta(t) + \frac{v(t)}{l_{wb}} \tan(\delta) \Delta t $$
 
 Where:
-- \\( (x, y) \\) represents the vehicle's position.
-- \\( \theta \\) is the vehicle's heading.
-- \\( v \\) is the vehicle's velocity.
-- \\( \phi \\) is the steering angle at the front wheel.
-- \\( L \\) is the wheelbase, or distance between front and rear axles.
-- \\( \Delta t \\) is the time step.
+- $$ (x, y) $$ represents the vehicle's position.
+- $$ \theta $$ is the vehicle's heading.
+- $$ v $$ is the vehicle's velocity.
+- $$ \delta $$ is the steering angle at the front wheel.
+- $$ l_{wb} $$ is the wheelbase, or distance between front and rear axles.
+- $$ \Delta t $$ is the time step.
+
 
 The RK4 method is then applied for forward simulation to improve prediction accuracy over short horizons.
 
@@ -49,7 +58,12 @@ The RK4 method is then applied for forward simulation to improve prediction accu
 ## 2. Motion Transformer
 
 ### Overview
-The Motion Transformer is a state-of-the-art model that considers historical data to predict future trajectories.
+The Motion Transformer <a href="#ref1"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
+
+![motion_transformer](../../assets/motion_transformer.png){: .center-image }
+
+*The structure of the motion transformer <a href="#ref1"><sup>[2]</sup></a>*
+{: .text-center}
 
 ### Why Motion Transformer?
 Simpler models lack the nuance needed for complex environments. The Motion Transformer accounts for historical trajectories, giving it an edge in intricate scenarios.
@@ -67,3 +81,10 @@ Simpler models lack the nuance needed for complex environments. The Motion Trans
 2. Understand and set up the Motion Transformer's neural network.
 3. Collect, process datasets, and conduct training and simulation tests.
 4. Integrate into the current pipeline and ensure ongoing model optimization.
+
+
+## References
+<ol>
+    <li id="ref1">Schöller C, Aravantinos V, Lay F, et al. What the constant velocity model can teach us about pedestrian motion prediction[J]. IEEE Robotics and Automation Letters, 2020, 5(2): 1696-1703.</li>
+    <li id="ref2">Shi S, Jiang L, Dai D, et al. Motion transformer with global intention localization and local movement refinement[J]. Advances in Neural Information Processing Systems, 2022, 35: 6531-6543.</li>
+</ol>
