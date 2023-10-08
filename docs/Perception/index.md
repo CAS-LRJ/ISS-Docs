@@ -7,8 +7,8 @@ nav_order: 3
 # Perception
 {: .d-inline-block }
 
-(WIP)
-{: .label .label-blue}
+<!-- (WIP)
+{: .label .label-blue} -->
 
 ## Introduction to the Perception Module
 
