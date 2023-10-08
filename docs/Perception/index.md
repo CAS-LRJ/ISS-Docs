@@ -7,8 +7,8 @@ nav_order: 3
 ## Perception
 {: .d-inline-block }
 
-(WIP)
-{: .label .label-blue}
+<!-- (WIP)
+{: .label .label-blue} -->
 
 ISS perception module includes 3D obstacle perception, 2D object recognition, 2D semantic segmentation, and sensor-based Bird's Eye View (BEV) map generation. Our team is focused on developing and refining these critical perception tasks. These tasks serve as the foundation for enabling our vehicles to navigate complex environments with safety and precision. Below, we briefly outline each of these tasks:
 
