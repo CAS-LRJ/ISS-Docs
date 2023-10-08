@@ -11,7 +11,7 @@ math: katex
 
 Prediction plays a pivotal role in autonomous driving, determining the probable actions of on-road agents to ensure safe navigation. In this documentation, we outline our current methodologies, from the simple constant velocity motion predictor to the more advanced Motion Transformer.
 
-## 1. Constant Velocity Motion Predictor
+## Constant Velocity Motion Predictor
 
 ### Overview
 The constant velocity model is the most basic but effective method of prediction <a href="#ref1"><sup>[1]</sup></a>, assuming an entity continues its current trajectory at a constant speed. Here, we forward simulate the kinematic bicycle model via Runge-Kutta 4 (RK4) integration, assuming no acceleration and steering angle.
@@ -55,7 +55,7 @@ The RK4 method is then applied for forward simulation to improve prediction accu
 - Highways and expressways.
 - Open areas with minimal obstructions.
 
-## 2. Motion Transformer
+## Motion Transformer
 
 ### Overview
 The Motion Transformer <a href="#ref1"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
