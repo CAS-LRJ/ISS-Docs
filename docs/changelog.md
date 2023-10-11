@@ -3,6 +3,11 @@ title: CHANGELOG
 layout: home
 nav_order: 1000
 ---
+## Release v1.0.0beta (Oct 13)
+Major updates: 
+- Add GNSS sensor data type
+- Add link of collected CARLA object detection dataset
+
 ## Release v1.0.0alpha (Oct 4)
 Major updates:
 - Add constant velocity prediction
