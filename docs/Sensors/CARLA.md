@@ -73,3 +73,37 @@ Additionally, the `noise_stddev` attribute makes for a noise model to simulate u
 
 The rotation of the LIDAR can be tuned to cover a specific angle on every simulation step (using a [fixed time-step](adv_synchrony_timestep.md)). For example, to rotate once per step (full circle output, as in the picture below), the rotation frequency and the simulated FPS should be equal. <br> __1.__ Set the sensor's frequency `sensors_bp['lidar'][0].set_attribute('rotation_frequency','10')`. <br> __2.__ Run the simulation using `python3 config.py --fps=10`.
 
+## CarlaGNSS
+
+* __Blueprint:__ sensor.other.gnss
+* __Output:__ [carla.GNSSMeasurement](python_api.md#carla.GnssMeasurement) per step (unless `sensor_tick` says otherwise).
+
+Reports current [gnss position](https://www.gsa.europa.eu/european-gnss/what-gnss) of its parent object. This is calculated by adding the metric position to an initial geo reference location defined within the OpenDRIVE map definition.
+
+#### GNSS attributes
+
+
+| Blueprint attribute      | Type   | Default            | Description        |
+| ------------------- | ------------------- | ------------------- | ------------------- |
+| `noise_alt_bias`   | float  | 0\.0   | Mean parameter in the noise model for altitude.    |
+| `noise_alt_stddev` | float  | 0\.0   | Standard deviation parameter in the noise model for altitude.  |
+| `noise_lat_bias`   | float  | 0\.0   | Mean parameter in the noise model for latitude.    |
+| `noise_lat_stddev` | float  | 0\.0   | Standard deviation parameter in the noise model for latitude.  |
+| `noise_lon_bias`   | float  | 0\.0   | Mean parameter in the noise model for longitude.   |
+| `noise_lon_stddev` | float  | 0\.0   | Standard deviation parameter in the noise model for longitude. |
+| `noise_seed`       | int    | 0      | Initializer for a pseudorandom number generator.   |
+| `sensor_tick`      | float  | 0\.0   | Simulation seconds between sensor captures (ticks).            |
+
+<br>
+
+#### Output attributes
+
+
+| Sensor data attribute            | Type  | Description        |
+| ----------------------- | ----------------------- | ----------------------- |
+| `frame`            | int   | Frame number when the measurement took place.      |
+| `timestamp`        | double | Simulation time of the measurement in seconds since the beginning of the episode.        |
+| `transform`        | [carla.Transform](<../python_api#carlatransform>)  | Location and rotation in world coordinates of the sensor at the time of the measurement. |
+| `latitude`         | double | Latitude of the actor.           |
+| `longitude`        | double | Longitude of the actor.          |
+| `altitude`         | double | Altitude of the actor.           |

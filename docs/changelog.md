@@ -8,6 +8,9 @@ nav_order: 1000
 Major updates:
 
 - Add 3d detection & torch script wrapper
+- Add GNSS sensor data type
+- Add link of collected CARLA object detection dataset
+- Prepare for implementing EM Planner
 
 ## Release v1.0.0alpha (Oct 4)
 

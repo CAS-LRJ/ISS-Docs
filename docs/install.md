@@ -7,6 +7,8 @@ nav_order: 1
 
 Intelligent Self-driving System (ISS) is a modular framework written in Python and C++. The aim for this framework is to build a extensible framework for research propose. This framework will contain both classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal external library can provide a transparent and clean workspace for researchers to evaluate ADS alogirhtms.
 
+The code of ISS can be downloaded from [*Github Repository*](https://github.com/CAS-LRJ/ISS).
+
 ## Dependencies
 
 Here we list the minimal dependencies required by ISS and optional libraries recommonded. Also, some examples will be written in Jupyter Notebook.
@@ -66,9 +68,11 @@ Make sure the CARLA 0.9.13 Server is opened before execution of `run_carla.py`. 
 
 ## Current Release
 
-### 1.0.0 Alpha
+## Release v1.0.1alpha (Oct 11)
 
-- Add Carla Sensors
-- Add Lanelet2 Global Planner and Frenet Optimal Trajectory (Lattice)
-- Initial Design of DataExchange Objects
-- Add miscellaneous utilities
+Major updates:
+
+- Add 3d detection & torch script wrapper
+- Add GNSS sensor data type
+- Add link of collected CARLA object detection dataset
+- Prepare for implementing EM Planner
