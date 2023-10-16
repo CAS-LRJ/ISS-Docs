@@ -3,7 +3,7 @@ title: CHANGELOG
 layout: home
 nav_order: 1000
 ---
-## Release v1.0.1alpha (Oct 4)
+## Release v1.0.1alpha (Oct 11)
 
 Major updates:
 
