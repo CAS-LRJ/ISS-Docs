@@ -1,5 +1,5 @@
 title: ISS
-description: A modular self-driving system with minimal external library in Python.
+description: A self-contained modular system in Python for autonomous driving.
 theme: just-the-docs
 # source: docs/
 
