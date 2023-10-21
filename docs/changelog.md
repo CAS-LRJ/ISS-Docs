@@ -3,6 +3,13 @@ title: CHANGELOG
 layout: home
 nav_order: 1000
 ---
+## Release v1.0.2alpha (Oct 20)
+
+Major updates:
+
+- Fix the bug causing sensor delay with actual scene.
+
+
 ## Release v1.0.1alpha (Oct 11)
 
 Major updates:
