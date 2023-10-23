@@ -13,7 +13,7 @@ Intelligent Self-driving System (ISS) is a modular framework written in Python a
 *ISS Architecture*
 {: .text-center}
 
-## Simulator Demos
+<!-- ## Simulator Demos
 At present, the ISS has the capability to deploy and test algorithms using simulator data. Upon integrating sensor data from the CARLA simulator into our framework, we can evaluate a range of algorithms. Additionally, corresponding control algorithms can be employed to maneuver simulated vehicles. Here are some demonstrations.
 
 <video width="640" height="360" controls>
@@ -57,7 +57,7 @@ Two demos featuring physical minicars navigating indoor and outdoor environments
 {: .center-image }
 
 A demo showcasing the A-LOAM SLAM algorithm using data from physical minicars
-{: .text-center}
+{: .text-center} -->
 
 <!-- ## Our Works
 
