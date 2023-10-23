@@ -58,11 +58,11 @@ The RK4 method is then applied for forward simulation to improve prediction accu
 ## Motion Transformer
 
 ### Overview
-The Motion Transformer <a href="#ref1"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
+The Motion Transformer <a href="#ref2"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
 
 ![motion_transformer](../../assets/motion_transformer.png){: .center-image }
 
-*The structure of the motion transformer <a href="#ref1"><sup>[2]</sup></a>*
+*The structure of the motion transformer <a href="#ref2"><sup>[2]</sup></a>*
 {: .text-center}
 
 ### Why Motion Transformer?
