@@ -8,7 +8,7 @@ nav_order: 1000
 Major updates:
 
 - Fix the bug causing sensor delay with actual scene.
-- Added and Tested EM_Planner's reference_line, Cartesian&Frenet conversion, plan_state_estimate.
+- Added and Tested EM_Planner's reference_line module, Cartesian&Frenet conversion method, plan_state_estimate method, stitch_trajectory method.
 
 
 ## Release v1.0.1alpha (Oct 11)
