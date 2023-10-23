@@ -8,6 +8,7 @@ nav_order: 1000
 Major updates:
 
 - Fix the bug causing sensor delay with actual scene.
+- Added and Tested reference_line, Cartesian&Frenet conversion, plan_state_estimate.
 
 
 ## Release v1.0.1alpha (Oct 11)
