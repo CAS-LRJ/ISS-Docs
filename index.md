@@ -6,14 +6,14 @@ nav_order: 0
 
 # ISS
 
-Intelligent Self-driving System (ISS) is a modular framework written in Python and C++. The aim for this framework is to build a extensible framework for research propose. This framework will contain both classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal dependency on external libraries can provide a transparent and clean workspace for researchers to evaluate ADS algorithms.
+Intelligent Self-driving System (ISS) is a modular framework written in Python and C++. The aim of this framework is to build an extensible framework for the research purpose. This framework will contain classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal dependency on external libraries can provide a transparent and clean workspace for researchers to evaluate ADS algorithms.
 
 ![ISS Architecture](assets/ISS_Framework.png){: .center-image }
 
 *ISS Architecture*
 {: .text-center}
 
-<!-- ## Simulator Demos
+## Simulator Demos
 At present, the ISS has the capability to deploy and test algorithms using simulator data. Upon integrating sensor data from the CARLA simulator into our framework, we can evaluate a range of algorithms. Additionally, corresponding control algorithms can be employed to maneuver simulated vehicles. Here are some demonstrations.
 
 <video width="640" height="360" controls>
@@ -34,7 +34,7 @@ A demo showing the local behavior planning
 
 
 ## Minicar Demos
-In addition to simulation results, if the sensor data from the minicar is transmitted back to the ISS via ROS, the ISS can leverage the sensory data to accomplish a variety of tasks and exert control over the physical minicar. We also provide some demonstrations as follow.
+In addition to simulation results, if the sensor data from the minicar is transmitted back to the ISS via ROS, the ISS can leverage the sensory data to accomplish a variety of tasks and exert control over the physical minicar. We also provide some demonstrations as follows.
 
 
 <video width="640" height="360" controls>
@@ -57,7 +57,7 @@ Two demos featuring physical minicars navigating indoor and outdoor environments
 {: .center-image }
 
 A demo showcasing the A-LOAM SLAM algorithm using data from physical minicars
-{: .text-center} -->
+{: .text-center}
 
 <!-- ## Our Works
 
