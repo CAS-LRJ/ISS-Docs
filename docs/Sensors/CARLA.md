@@ -5,14 +5,13 @@ parent: Sensors
 nav_order: 1
 ---
 
-Sensors for interaction between ISS and CARLA.
+# Sensors in CARLA<a name="Sensor"></a>
 
+Sensors in CARLA compound a specific family of actors that are quite diverse and unique from the other CARLA actors; they model different sensing capabilities that can be used in self-driving systems. 
+Sensors are represented by CARLA actors that are normally spawned as attachment/sons of a vehicle. 
+Sensors are thoroughly designed to retrieve different types of data that they are listening to. 
 
-## CarlaSensor<a name="Sensor"></a>
-
-Sensors compound a specific family of actors quite diverse and unique. They are normally spawned as attachment/sons of a vehicle (take a look at [carla.World](#carla.World) to learn about actor spawning). Sensors are thoroughly designed to retrieve different types of data that they are listening to. 
-
-  Most sensors can be divided in two groups: those receiving data on every tick (cameras, point clouds and some specific sensors) and those who only receive under certain circumstances (trigger detectors). CARLA provides a specific set of sensors and their blueprint can be found in [carla.BlueprintLibrary](#carla.BlueprintLibrary). 
+Most sensors can be divided in two groups: those receiving data on every tick (cameras, point clouds and some other specific sensors) and those who only receive under certain circumstances (trigger detectors). CARLA provides a specific set of sensors and their blueprint can be found in [carla.BlueprintLibrary](#carla.BlueprintLibrary). 
 
 ### Instance Variables
 - <a name="carla.Sensor.is_listening"></a>**<font color="#f8805a">is_listening</font>** (_boolean_)  
