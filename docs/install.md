@@ -5,15 +5,18 @@ nav_order: 1
 ---
 # ISS
 
-Intelligent Self-driving System (ISS) is a modular framework written in Python and C++. The aim for this framework is to build a extensible framework for research propose. This framework will contain both classic and deep learning algorithms for self-driving tasks such as perception, localization, mapping, prediction, planning and control. The modular design with minimal dependency on external libraries can provide a transparent and clean workspace for researchers to evaluate ADS algorithms.
+Intelligent Self-driving System (ISS) is a modular framework written in Python and C++ with the aim to build an extensible workspace tailored to research. This framework will contain both traditional and deep learning algorithms for self-driving related tasks such as perception, localization, mapping, prediction, planning, and control. The modular design with minimal dependency on external libraries can provide a transparent and clean workspace for researchers to evaluate algorithms for autonomous driving systems.
 
-The code of ISS can be downloaded from [*Github Repository*](https://github.com/CAS-LRJ/ISS).
+The code of ISS can be downloaded from its [*Github Repository*](https://github.com/CAS-LRJ/ISS).
 
 ## Dependencies
 
-Here we list the minimal dependencies required by ISS and optional libraries recommonded. Also, some examples will be written in Jupyter Notebook.
+ISS is dependent on a minimal set of Python libraries; another set of recommended libraries can be optionally installed to improve its functionalities.
+Also, some examples will be written in Jupyter Notebook.
 
 ### Minimal Dependencies
+
+Python libraries required by ISS.
 
 ```yaml
 carla=0.9.13
@@ -30,7 +33,9 @@ spconv-cu118=2.3.6
 open3d=0.17.0
 ```
 
-### Optional Dependencies
+### Optional Libraries
+
+Optional packages that can be installed to improve ISS.
 
 ```yaml
 matplotlib=3.5.3
@@ -44,27 +49,27 @@ commonroad-vehicle-models=3.0.2
 
 ## Build
 
-Run following command to build the project:
+After cloning the [ISS repository](https://github.com/CAS-LRJ/ISS), run the following command to build the ISS framework:
 
 ```bash
 python setup.py build_ext --inplace
 ```
 
-We suggest using virtual environment under Windows system. Cython 3.0.0 is currently not supported, so please use Cython 0.29.xx instead. 0.29.{33, 36} are tested. For simulators' version control, we are currently using **CARLA 0.9.13** and **BeamNG 0.27.2.0**, therefore you should use **carla==0.9.13** and **beamngpy==1.25.1** in your virtual enviroment.
+We suggest using a virtual environment to avoid conflicts between the Python libraries installed for ISS and one installed system-wide, in particular in Windows systems. Virtual environments can be managed by using e.g. [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/). Cython 3.0 is currently not supported, so please use Cython version 0.29 instead. Cython versions 0.29.33 and 0.29.36 have been tested. For simulators' version control, we are currently using **CARLA 0.9.13** and **BeamNG 0.27.2.0**, therefore you should use **carla==0.9.13** and **beamngpy==1.25.1** in your virtual enviroment.
 
-**Cautious**: Microsoft Visual C++ 14.0 or greater is required. To compile this project locally, you should have *visual-cpp-build-tools* pre-installed.
+**Caution**: If you are using a Windows system, Microsoft Visual C++ 14.0 or later is required. To compile this project locally, you should have *visual-cpp-build-tools* pre-installed.
 
 ## Run tasks
 
 ### CARLA Data Collector
 
-Run following command to collect various kinds of sensor data from CARLA:
+Run the following command to collect various kinds of sensor data from CARLA:
 
 ```bash
 python run_carla.py
 ```
 
-Make sure the CARLA 0.9.13 Server is opened before execution of `run_carla.py`. Data will be saved in `resources/data/carla`, which can be changed by modifying `{RAW_DATA, DATASET}_PATH`.
+Make sure the CARLA 0.9.13 Server is running before starting `run_carla.py`. Data will be saved in `resources/data/carla`, which can be changed by modifying the environment variables `{RAW_DATA, DATASET}_PATH`.
 
 ## Current Release
 
