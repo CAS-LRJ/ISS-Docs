@@ -41,9 +41,9 @@ The key to impeccable localization is not just in the individual prowess of sens
 
 ## References
 <ol>
-    <li id="ref1">Besl P J, McKay N D. Method for registration of 3-D shapes. In *Sensor fusion IV: control paradigms and data structures*. Spie, 1992, 1611: 586-606.</li>
-    <li id="ref2">Biber P, Straßer W. The normal distributions transform: A new approach to laser scan matching. In *Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003)*. IEEE, 2003, 3: 2743-2748.</li>
-    <li id="ref3">Thrun S. Probabilistic robotics. In *Communications of the ACM*, 2002, 45(3): 52-57.</li>
-    <li id="ref4">Shan T, Englot B, Meyers D, et al. Lio-sam: Tightly-coupled LiDAR inertial odometry via smoothing and mapping. In *2020 IEEE/RSJ international conference on intelligent robots and systems (IROS)*. IEEE, 2020: 5135-5142.</li>
+    <li id="ref1">Besl P J, McKay N D. Method for registration of 3-D shapes. In <i>Sensor fusion IV: control paradigms and data structures</i>. Spie, 1992, 1611: 586-606.</li>
+    <li id="ref2">Biber P, Straßer W. The normal distributions transform: A new approach to laser scan matching. In <i>Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003)</i>. IEEE, 2003, 3: 2743-2748.</li>
+    <li id="ref3">Thrun S. Probabilistic robotics. In <i>Communications of the ACM</i>, 2002, 45(3): 52-57.</li>
+    <li id="ref4">Shan T, Englot B, Meyers D, et al. Lio-sam: Tightly-coupled LiDAR inertial odometry via smoothing and mapping. In <i>2020 IEEE/RSJ international conference on intelligent robots and systems (IROS)</i>. IEEE, 2020: 5135-5142.</li>
 </ol>
 
