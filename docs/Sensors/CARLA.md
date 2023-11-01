@@ -27,23 +27,24 @@ Commands the sensor to stop listening for data.
 
 ## CarlaCamera
 
-The "RGB" camera acts as a regular camera capturing images from the scene.
-If `enable_postprocess_effects` is enabled, a set of post-process effects is applied to the image for the sake of realism:
+The "RGB" camera acts as a regular [camera](index.html#Camera) capturing images from the scene.
+A CARLA camera can be tuned with respect to multiple parameters, such as `sensor_tick` and `enable_postprocess_effects`. 
+The numeric `sensor_tick` parameter controls how fast we want the sensor to capture the scene: 
+for example, a value of 1.5 means that we want the sensor to capture an image each second and a half. The value 0.0 is used as default and it instructs the camera to capture images as fast as possible.
+
+The `enable_postprocess_effects` parameters allows the user to increase the realism of the captured images, by applying the corresponding set of post-process effects:
 
 * __Vignette:__ darkens the border of the screen.
 * __Grain jitter:__ adds some noise to the render.
 * __Bloom:__ intense lights burn the area around them.
 * __Auto exposure:__ modifies the image gamma to simulate the eye adaptation to darker or brighter areas.
 * __Lens flares:__ simulates the reflection of bright objects on the lens.
-* __Depth of field:__ blurs objects near or very far away of the camera.
+* __Depth of field:__ blurs objects near or very far away from the camera.
 
-
-The `sensor_tick` tells how fast we want the sensor to capture the data.
-A value of 1.5 means that we want the sensor to capture data each second and a half. By default a value of 0.0 means as fast as possible.
 
 ## CarlaLiDAR
 
-This sensor simulates a rotating LIDAR implemented using ray-casting.
+This sensor simulates a rotating LiDAR implemented using ray-casting.
 The points are computed by adding a laser for each channel distributed in the vertical FOV. The rotation is simulated computing the horizontal angle that the Lidar rotated in a frame. The point cloud is calculated by doing a ray-cast for each laser in every step.
 `points_per_channel_each_step = points_per_second / (FPS * channels)`
 
