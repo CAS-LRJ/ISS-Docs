@@ -85,7 +85,8 @@ this can be obtained by <br>__1.__ Setting the sensor's rotation_frequency attri
 * __Blueprint:__ sensor.other.gnss
 * __Output:__ [carla.GNSSMeasurement](python_api.md#carla.GnssMeasurement) per step (unless `sensor_tick` says otherwise).
 
-Reports current [gnss position](https://www.gsa.europa.eu/european-gnss/what-gnss) of its parent object. This is calculated by adding the metric position to an initial geo reference location defined within the OpenDRIVE map definition.
+This sensors models a [GPS receiver](index.html#GPS_IMU) and it provides the current [GNSS position](https://www.gsa.europa.eu/european-gnss/what-gnss) of the vehicle the sensor is attached to. 
+The current coordinates are calculated by adding the metric position to an initial geo reference location defined within the OpenDRIVE map definition.
 
 #### GNSS attributes
 
