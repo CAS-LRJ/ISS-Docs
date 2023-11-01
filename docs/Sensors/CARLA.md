@@ -44,11 +44,14 @@ The `enable_postprocess_effects` parameters allows the user to increase the real
 
 ## CarlaLiDAR
 
-This sensor simulates a rotating LiDAR implemented using ray-casting.
-The points are computed by adding a laser for each channel distributed in the vertical FOV. The rotation is simulated computing the horizontal angle that the Lidar rotated in a frame. The point cloud is calculated by doing a ray-cast for each laser in every step.
+This sensor simulates a rotating [LiDAR](index.html#LiDAR) implemented using ray-casting.
+The points are computed by adding a laser beam for each channel distributed in the vertical FOV. 
+The rotation is simulated by computing the horizontal angle corresponding to how much the LiDAR rotated between two consecutive frames taken with frequency `FPS`, that is, the LiDAR rotation angle in `1/FPS` seconds. 
+The point cloud is calculated by doing a ray-cast for each laser beam in every step.
 `points_per_channel_each_step = points_per_second / (FPS * channels)`
 
-A LIDAR measurement contains a package with all the points generated during a `1/FPS` interval. During this interval the physics are not updated so all the points in a measurement reflect the same "static picture" of the scene.
+A LIDAR measurement contains a package with all the points generated during an interval of length `1/FPS`. 
+During this interval the physics of the world are not updated so all points in the measurement reflect the same "static picture" of the scene.
 
 This output contains a cloud of simulation points and thus, it can be iterated to retrieve a list of their [`carla.Location`](python_api.md#carla.Location):
 
@@ -57,21 +60,25 @@ for location in lidar_measurement:
     print(location)
 ```
 
-The information of the LIDAR measurement is enconded 4D points. Being the first three, the space points in xyz coordinates and the last one intensity loss during the travel. This intensity is computed by the following formula.
+The information of the LiDAR measurement is encoded by means of 4D points. 
+The first three dimensions represent the space points in the usual XYZ spatial coordinates; 
+the last one stands for the intensity loss during the travel. 
+This intensity is computed by the following formula.
 <br>
 
 
-`a` — Attenuation coefficient. This may depend on the sensor's wavelenght, and the conditions of the atmosphere. It can be modified with the LIDAR attribute `atmosphere_attenuation_rate`.
+`a` — Attenuation coefficient. This may depend on the sensor's wavelenght, and the conditions of the atmosphere. It can be modified with the LiDAR attribute `atmosphere_attenuation_rate`.
 `d` — Distance from the hit point to the sensor.
 
-For a better realism, points in the cloud can be dropped off. This is an easy way to simulate loss due to external perturbations. This can done combining two different.
+For a better realism, points in the cloud can be dropped off. This is an easy way to simulate loss due to external perturbations. This can done combining two different parameters.
 
-*   __General drop-off__ — Proportion of points that are dropped off randomly. This is done before the tracing, meaning the points being dropped are not calculated, and therefore improves the performance. If `dropoff_general_rate = 0.5`, half of the points will be dropped.
-*   __Instensity-based drop-off__ — For each point detected, and extra drop-off is performed with a probability based in the computed intensity. This probability is determined by two parameters. `dropoff_zero_intensity` is the probability of points with zero intensity to be dropped. `dropoff_intensity_limit` is a threshold intensity above which no points will be dropped. The probability of a point within the range to be dropped is a linear proportion based on these two parameters.
+*   __General drop-off__ — Proportion of points that are dropped off randomly. This is done before the tracing, meaning the points being dropped are not calculated, thus improving the performance. If `dropoff_general_rate = 0.5`, half of the points will be dropped.
+*   __Instensity-based drop-off__ — For each point detected, and extra drop-off is performed with a probability based in the computed intensity. This probability is determined by two parameters: `dropoff_zero_intensity` and `dropoff_intensity_limit`, where is the probability of points with zero intensity to be dropped while `dropoff_intensity_limit` is a threshold intensity above which no points will be dropped. The probability of a point within the range to be dropped is a linear proportion based on these two parameters.
 
-Additionally, the `noise_stddev` attribute makes for a noise model to simulate unexpected deviations that appear in real-life sensors. For positive values, each point is randomly perturbed along the vector of the laser ray. The result is a LIDAR sensor with perfect angular positioning, but noisy distance measurement.
+Additionally, the `noise_stddev` attribute makes for a noise model to simulate unexpected deviations that appear in real-life sensors. For positive values, each point is randomly perturbed along the vector of the laser beam. The result is a LiDAR sensor with perfect angular positioning, but noisy distance measurement.
 
-The rotation of the LIDAR can be tuned to cover a specific angle on every simulation step (using a [fixed time-step](adv_synchrony_timestep.md)). For example, to rotate once per step (full circle output, as in the picture below), the rotation frequency and the simulated FPS should be equal. <br> __1.__ Set the sensor's frequency `sensors_bp['lidar'][0].set_attribute('rotation_frequency','10')`. <br> __2.__ Run the simulation using `python3 config.py --fps=10`.
+The rotation of the LiDAR can be tuned to cover a specific angle on every simulation step (using a [fixed time-step](adv_synchrony_timestep.md)). For example, to rotate once per step (full circle output, as in the picture below), the rotation frequency and the simulated FPS should be the same; 
+this can be obtained by <br>__1.__ Setting the sensor's rotation_frequency attribute `sensors_bp['lidar'][0].set_attribute('rotation_frequency','10')`. <br> __2.__ Running the simulation using the option `--fps=N`, e.g., `python3 config.py --fps=10`.
 
 ## CarlaGNSS
 
