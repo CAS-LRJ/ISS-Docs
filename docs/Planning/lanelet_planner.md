@@ -6,10 +6,16 @@ nav_order: 2
 ---
 
 ## Lanelet2Planner<a name="Lanelet2Planner"></a>
-A global trajectory planner based on Lanelet2 HD-Map. The implementation relies on [Lanelet2 Python API](https://github.com/fzi-forschungszentrum-informatik/Lanelet2). Currently, the global planner will find closest lanelets for both start point and end point. Then, it will utilise the Lanelet2 routing module to generate the submap contains all possible lanelets from the start lanelet to the end lanelet. A trajectory will be generated using the modified flood-fill algorithm. The final trajectory will connect the start point to the end point. (Start Point -> Start Lanelet -> End Lanelet -> End Point)
+A global trajectory planner based on Lanelet2 HD-Map. 
+The implementation relies on the [Lanelet2 Python API](https://github.com/fzi-forschungszentrum-informatik/Lanelet2). 
+Currently, the global planner will find the closest lanelets for both the start point and the end point. 
+Then, it will use the Lanelet2 routing module to generate a submap containing all possible lanelets from the start lanelet to the end lanelet. 
+A trajectory will then be generated using the modified flood-fill algorithm so that it will connect the start point to the end point: Start point -> Start lanelet -> End lanelet -> End point.
 
 {: .note }
-The global planner module currently uses Lanelet2 HDMap format. Since the Lanelet2 Python API only support linux system, this module may not work properly in other platforms. We will seperate the mapping and the planning module apart in further release and support more HDMap format (e.g. OpenDrive).
+The ISS global planner module currently uses the Lanelet2 HDMap format. 
+Since the Lanelet2 Python API only supports Linux systems, this module may not work properly in other platforms. 
+We will separate the mapping and the planning module apart in a future release and support more HDMap formats (e.g. OpenDrive).
 
 ### Instance Variables
 - **<font color="#f8805a">lanelet_map</font>** (_lanelet2.core.LaneletMap_)  
