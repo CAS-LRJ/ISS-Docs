@@ -9,17 +9,20 @@ math: katex
 
 ## Introduction to the Prediction Module
 
-Prediction plays a pivotal role in autonomous driving, determining the probable actions of on-road agents to ensure safe navigation. In this documentation, we outline our current methodologies, from the simple constant velocity motion predictor to the more advanced Motion Transformer.
+Prediction plays a pivotal role in autonomous driving, determining the probable actions of on-road agents to ensure safe navigation. 
+In this documentation, we outline our current methodologies, from the simple [constant velocity motion](#CVM) predictor to the more advanced [Motion Transformer](#MT).
 
-## Constant Velocity Motion Predictor
+
+## Constant Velocity Motion Predictor<a name="CVM"/>
 
 ### Overview
-The constant velocity model is the most basic but effective method of prediction <a href="#ref1"><sup>[1]</sup></a>, assuming an entity continues its current trajectory at a constant speed. Here, we forward simulate the kinematic bicycle model via Runge-Kutta 4 (RK4) integration, assuming no acceleration and steering angle.
+The constant velocity model is the most basic but effective method of prediction<a href="#ref1"><sup>[1]</sup></a>, assuming an entity continues its current trajectory at a constant speed. 
+Here, we forward simulate the kinematic bicycle model via the Runge-Kutta 4 (RK4) integration, assuming no acceleration and steering angle.
 
 
 ### Applicability and Limitations
-- **Applicability**: Ideal for high-speed highways where motion is relatively linear.
-- **Limitations**: In urban or crowded areas, this model may not capture erratic movements of agents.
+- **Applicability**: ideal for high-speed highways where motion is relatively linear.
+- **Limitations**: in urban or crowded areas, this model may not capture erratic movements of the agents.
 
 ### Mathematical Model
 ![kine_bicycle_model](../../assets/kine_bicycle_model.png){: .center-image width="50%"}
@@ -29,24 +32,23 @@ The constant velocity model is the most basic but effective method of prediction
 
 The primary equations governing the kinematic bicycle model are:
 
-1. **Position updates**:
+1. **Position updates**: the spatial coordinates of the vehicle rear wheel are updated from time $t$ to time $t + 1$ as  
    
     $$ x(t+1) = x(t) + v(t) \cos(\theta(t)) \Delta t $$
 
     $$ y(t+1) = y(t) + v(t) \sin(\theta(t)) \Delta t $$
 
-2. **Heading update**:
+2. **Heading update**: the heading of the bicycle changes as
    
     $$ \theta(t+1) = \theta(t) + \frac{v(t)}{l_{wb}} \tan(\delta) \Delta t $$
 
-Where:
-- $$ (x, y) $$ represents the vehicle's position.
-- $$ \theta $$ is the vehicle's heading.
-- $$ v $$ is the vehicle's velocity.
-- $$ \delta $$ is the steering angle at the front wheel.
-- $$ l_{wb} $$ is the wheelbase, or distance between front and rear axles.
+where
+- $$ (x, y) $$ represents the vehicle's position;
+- $$ \theta $$ is the vehicle's heading;
+- $$ v $$ denotes the vehicle's velocity;
+- $$ \delta $$ is the steering angle at the front wheel;
+- $$ l_{wb} $$ is the wheelbase, i.e., the distance between the front and rear axles; and
 - $$ \Delta t $$ is the time step.
-
 
 The RK4 method is then applied for forward simulation to improve prediction accuracy over short horizons.
 
@@ -55,36 +57,38 @@ The RK4 method is then applied for forward simulation to improve prediction accu
 - Highways and expressways.
 - Open areas with minimal obstructions.
 
-## Motion Transformer
+
+## Motion Transformer<a name="MT"/>
 
 ### Overview
-The Motion Transformer <a href="#ref2"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
+The Motion Transformer<a href="#ref2"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
 
 ![motion_transformer](../../assets/motion_transformer.png){: .center-image }
 
-*The structure of the motion transformer <a href="#ref2"><sup>[2]</sup></a>*
+*The structure of the motion transformer<a href="#ref2"><sup>[2]</sup></a>*
 {: .text-center}
 
 ### Why Motion Transformer?
-Simpler models lack the nuance needed for complex environments. The Motion Transformer accounts for historical trajectories, giving it an edge in intricate scenarios.
+Simpler models lack the nuance needed for complex environments. 
+The Motion Transformer accounts for historical trajectories, giving it an edge in intricate scenarios.
 
 ### Architecture & Components
-- **Attention Mechanisms**: To weigh the importance of different historical data points.
-- **Encoder-Decoder Structures**: The encoder processes the input sequence, while the decoder produces the predicted trajectory.
+- **Attention Mechanisms**: to weigh the importance of different historical data points.
+- **Encoder-Decoder Structures**: the encoder processes the input sequence, while the decoder produces the predicted trajectory.
 
 ### Input/Output Details
-- **Input**: Historical trajectory data.
-- **Output**: Predicted future trajectories with confidence intervals.
+- **Input**: historical trajectory data.
+- **Output**: predicted future trajectories with confidence intervals.
 
 ## Implementation Roadmap
 1. Maintain the existing constant velocity motion predictor to ensure basic functionality.
 2. Understand and set up the Motion Transformer's neural network.
-3. Collect, process datasets, and conduct training and simulation tests.
+3. Collect and process datasets and conduct training and simulation tests.
 4. Integrate into the current pipeline and ensure ongoing model optimization.
 
 
 ## References
 <ol>
-    <li id="ref1">Schöller C, Aravantinos V, Lay F, et al. What the constant velocity model can teach us about pedestrian motion prediction[J]. IEEE Robotics and Automation Letters, 2020, 5(2): 1696-1703.</li>
-    <li id="ref2">Shi S, Jiang L, Dai D, et al. Motion transformer with global intention localization and local movement refinement[J]. Advances in Neural Information Processing Systems, 2022, 35: 6531-6543.</li>
+    <li id="ref1">Schöller C, Aravantinos V, Lay F, et al. What the constant velocity model can teach us about pedestrian motion prediction. In <i>IEEE Robotics and Automation Letters</i>, 2020, 5(2): 1696-1703.</li>
+    <li id="ref2">Shi S, Jiang L, Dai D, et al. Motion transformer with global intention localization and local movement refinement. In <i>Advances in Neural Information Processing Systems</i>, 2022, 35: 6531-6543.</li>
 </ol>
