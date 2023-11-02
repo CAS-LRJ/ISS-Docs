@@ -32,7 +32,7 @@ Here, we forward simulate the kinematic bicycle model via the Runge-Kutta 4 (RK4
 
 The primary equations governing the kinematic bicycle model are:
 
-1. **Position updates**: the spatial coordinates of the vehicle rear wheel are updated from time $t$ to time $t + 1$ as  
+1. **Position updates**: the spatial coordinates of the vehicle rear wheel are updated from time $$ t $$ to time $$ t + 1 $$ as  
    
     $$ x(t+1) = x(t) + v(t) \cos(\theta(t)) \Delta t $$
 
