@@ -55,7 +55,7 @@ After cloning the [ISS repository](https://github.com/CAS-LRJ/ISS), run the foll
 python setup.py build_ext --inplace
 ```
 
-We suggest using a virtual environment to avoid conflicts between the Python libraries installed for ISS and one installed system-wide, in particular in Windows systems. Virtual environments can be managed by using e.g. [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/). Cython 3.0 is currently not supported, so please use Cython version 0.29 instead. Cython versions 0.29.33 and 0.29.36 have been tested. For simulators' version control, we are currently using **CARLA 0.9.13** and **BeamNG 0.27.2.0**, therefore you should use **carla==0.9.13** and **beamngpy==1.25.1** in your virtual enviroment.
+We suggest using a virtual environment to avoid conflicts between the Python libraries installed for ISS and one installed system-wide, in particular in Windows systems. Virtual environments can be managed by using e.g. [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/). Cython 3.0 is currently not supported, so please use Cython version 0.29 instead. Cython versions 0.29.33 and 0.29.36 have been tested. For simulators' version control, we are currently using **CARLA 0.9.13** and **BeamNG 0.27.2.0**, therefore you should use **carla==0.9.13** and **beamngpy==1.25.1** in your virtual environment.
 
 **Caution**: If you are using a Windows system, Microsoft Visual C++ 14.0 or later is required. To compile this project locally, you should have *visual-cpp-build-tools* pre-installed.
 

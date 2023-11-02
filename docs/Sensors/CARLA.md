@@ -67,13 +67,13 @@ This intensity is computed by the following formula.
 <br>
 
 
-`a` — Attenuation coefficient. This may depend on the sensor's wavelenght, and the conditions of the atmosphere. It can be modified with the LiDAR attribute `atmosphere_attenuation_rate`.
+`a` — Attenuation coefficient. This may depend on the sensor's wavelength, and the conditions of the atmosphere. It can be modified with the LiDAR attribute `atmosphere_attenuation_rate`.
 `d` — Distance from the hit point to the sensor.
 
 For a better realism, points in the cloud can be dropped off. This is an easy way to simulate loss due to external perturbations. This can done combining two different parameters.
 
 *   __General drop-off__ — Proportion of points that are dropped off randomly. This is done before the tracing, meaning the points being dropped are not calculated, thus improving the performance. If `dropoff_general_rate = 0.5`, half of the points will be dropped.
-*   __Instensity-based drop-off__ — For each point detected, and extra drop-off is performed with a probability based in the computed intensity. This probability is determined by two parameters: `dropoff_zero_intensity` and `dropoff_intensity_limit`, where is the probability of points with zero intensity to be dropped while `dropoff_intensity_limit` is a threshold intensity above which no points will be dropped. The probability of a point within the range to be dropped is a linear proportion based on these two parameters.
+*   __Intensity-based drop-off__ — For each point detected, and extra drop-off is performed with a probability based in the computed intensity. This probability is determined by two parameters: `dropoff_zero_intensity` and `dropoff_intensity_limit`, where is the probability of points with zero intensity to be dropped while `dropoff_intensity_limit` is a threshold intensity above which no points will be dropped. The probability of a point within the range to be dropped is a linear proportion based on these two parameters.
 
 Additionally, the `noise_stddev` attribute makes for a noise model to simulate unexpected deviations that appear in real-life sensors. For positive values, each point is randomly perturbed along the vector of the laser beam. The result is a LiDAR sensor with perfect angular positioning, but noisy distance measurement.
 

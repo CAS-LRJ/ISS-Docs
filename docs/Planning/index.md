@@ -19,7 +19,7 @@ In this post, we will explore each stage in-depth.
 {: .text-center}
 
 
-## Route Planning
+## Route Planning<a name="route"/>
 
 ### Objective
 The task of route planning stage is to find the most effective course from the current location to the desired destination, much like how conventional GPS navigation systems operate.
@@ -41,7 +41,7 @@ There are many challenges the road planning module has to take into consideratio
 - ensuring the chosen route is both safe and efficient.
 
 
-## Behavior Planning
+## Behavior Planning<a name="behavior"/>
 
 ### Objective
 The main task of the behavior planning stage is to dictate the vehicle's overarching behavior, from decisions about lane switches, overtaking, yielding, to making turns.
@@ -63,13 +63,13 @@ In making its decisions, the behavior planning stage needs to address multiple i
 - navigating uncommon edge cases.
 
 
-## Motion Planning
+## Motion Planning<a name="motion"/>
 
 ### Objective
 The last stage of the planning module workflow is motion planning, whose aim is to chart a trajectory that is both safe and consistent for the vehicle, reflecting the behavior objectives and staying within the vehicle's dynamic and kinematic constraints.
 
 ### Inputs
-To produce a smooth trajectory for the vehicle, the motion planning needs mutiple types of data, like
+To produce a smooth trajectory for the vehicle, the motion planning needs multiple types of data, like
 - the intended behavior established by the behavior planning;
 - the present vehicle state (such as position, speed, and acceleration);
 - the road map details; and 
