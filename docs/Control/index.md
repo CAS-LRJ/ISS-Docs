@@ -7,33 +7,41 @@ math: mathjax
 
 # Control
 ## Introduction to the Control Module
-The Control module is responsible for generating control commands to steer the vehicle and maintain its desired trajectory. In this documentation, we outline our current methodologies, from the simple PID controller to the more advanced Model Predictive Control (MPC).
+The Control module is responsible for generating control commands to steer the vehicle and maintain its desired trajectory. 
+In this documentation, we outline our current methodologies, from the simple [PID controller](#PID) to the more advanced [Model Predictive Control (MPC)](#MPC).
 
-## PID Controller for Waypoint Tracking
+
+## PID Controller for Waypoint Tracking<a name="PID"/>
 
 ### Overview:
-The PID controller is one of the fundamental control algorithms in our autonomous driving pipeline. It continuously calculates an "error" value as the difference between a desired setpoint (in this case, waypoints) and the current vehicle position.
+The PID controller is one of the fundamental control algorithms in our autonomous driving pipeline. 
+It continuously calculates an "error" value as the difference between a desired setpoint (in this case, waypoints) and the current vehicle position.
 
 ### Components:
-- **Proportional (P)**: Provides a control output to correct the current position error.
+The PID controller include three components, as its name suggests:
+- **Proportional (P)**: provides a control output to correct the current position error.
 - **Integral (I)**: Corrects the accumulation of past errors.
-- **Derivative (D)**: Predicts and counters the future error trend based on its current rate of change.
+- **Derivative (D)**: predicts and counters the future error trend based on its current rate of change.
 
 ### Application:
 We use the PID controller primarily for waypoint tracking, maintaining lane position, and ensuring the vehicle follows a predefined path with minimal deviation.
 
-## Model Predictive Control (MPC) for Trajectory Tracking
+
+## Model Predictive Control (MPC) for Trajectory Tracking<a name="MPC"/>
 
 ### Overview:
-Model Predictive Control (MPC) is an advanced control technique that uses a model of the vehicle's dynamics to predict its future states over a defined horizon. At each time step, the MPC solves an optimization problem to find the optimal control inputs, considering vehicle dynamics, constraints, and the desired trajectory.
+Model Predictive Control (MPC) is an advanced control technique that uses a model of the vehicle's dynamics to predict its future states over a defined horizon. 
+At each time step, the MPC algorithm solves an optimization problem to find the optimal control inputs, considering vehicle dynamics, constraints, and the desired trajectory.
 
 ### Key Features:
-- **Prediction Model**: Predicts future states of the vehicle based on its current state and potential control inputs.
-- **Optimization**: Continuously solves an optimization problem to determine the best control actions over the prediction horizon.
-- **Receding Horizon Strategy**: Implements only the first control action of the optimized sequence and re-evaluates at the next time step, adapting to changing conditions.
+The MPC controller involves three key features to decide what actions to perform to control the vehicle's movement:
+- **Prediction Model**: predicts future states of the vehicle based on its current state and potential control inputs.
+- **Optimization**: continuously solves an optimization problem to determine the best control actions over the prediction horizon.
+- **Receding Horizon Strategy**: implements only the first control action of the optimized sequence and re-evaluates at the next time step, adapting to changing conditions.
 
 ### Application:
-The MPC controller will be instrumental in scenarios where precise trajectory tracking is essential, especially in complex driving environments with dynamic obstacles, tight curves, and varying road conditions. By anticipating future states and constraints, the MPC offers enhanced path following accuracy and robustness compared to traditional controllers.
+The MPC controller will be instrumental in scenarios where precise trajectory tracking is essential, especially in complex driving environments with dynamic obstacles, tight curves, and varying road conditions. 
+By anticipating future states and constraints, MPC offers enhanced path following accuracy and robustness compared to traditional controllers.
 
 ## Implementation Roadmap:
 1. Maintain and fine-tune the existing PID controller to ensure basic waypoint tracking functionality.
