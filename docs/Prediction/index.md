@@ -57,11 +57,13 @@ The RK4 method is then applied for forward simulation to improve prediction accu
 - Highways and expressways.
 - Open areas with minimal obstructions.
 
+In ISS, the constant velocity model is incorporated for motion forecasting in the structured road environment.
+
 
 ## Motion Transformer<a name="MT"/>
 
 ### Overview
-The Motion Transformer<a href="#ref2"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories.
+The Motion Transformer<a href="#ref2"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories. This framework models the motion prediction as a joint optimization of global intention localization and local movement refinement. Apart from considering the global information of the road structures, this method also incorporates different motion modes by adapting learnable motion queries. The overal structure of the Motion Transformer is shown in the figure below.
 
 ![motion_transformer](../../assets/motion_transformer.png){: .center-image }
 
@@ -89,6 +91,6 @@ The Motion Transformer accounts for historical trajectories, giving it an edge i
 
 ## References
 <ol>
-    <li id="ref1">Schöller C, Aravantinos V, Lay F, et al. What the constant velocity model can teach us about pedestrian motion prediction. In <i>IEEE Robotics and Automation Letters</i>, 2020, 5(2): 1696-1703.</li>
-    <li id="ref2">Shi S, Jiang L, Dai D, et al. Motion transformer with global intention localization and local movement refinement. In <i>Advances in Neural Information Processing Systems</i>, 2022, 35: 6531-6543.</li>
+    <li id="ref1">Schöller C, Aravantinos V, Lay F, et al. "What the constant velocity model can teach us about pedestrian motion prediction." In IEEE Robotics and Automation Letters, 2020, 5(2): 1696-1703.</li>
+    <li id="ref2">Shi S, Jiang L, Dai D, et al. "Motion transformer with global intention localization and local movement refinement." In Advances in Neural Information Processing Systems, 2022, 35: 6531-6543.</li>
 </ol>

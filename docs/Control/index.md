@@ -7,7 +7,7 @@ math: mathjax
 
 # Control
 ## Introduction to the Control Module
-The Control module is responsible for generating control commands to steer the vehicle and maintain its desired trajectory. 
+The Control module is responsible for generating control commands to steer the vehicle and maintain its desired trajectory. <a href="#ref1"><sup>[1]</sup></a>
 In this documentation, we outline our current methodologies, from the simple [PID controller](#PID) to the more advanced [Model Predictive Control (MPC)](#MPC).
 
 
@@ -30,7 +30,7 @@ We use the PID controller primarily for waypoint tracking, maintaining lane posi
 ## Model Predictive Control (MPC) for Trajectory Tracking<a name="MPC"/>
 
 ### Overview:
-Model Predictive Control (MPC) is an advanced control technique that uses a model of the vehicle's dynamics to predict its future states over a defined horizon. 
+Model Predictive Control (MPC) <a href="#ref2"><sup>[2]</sup></a>  is an advanced control technique that uses a model of the vehicle's dynamics to predict its future states over a defined horizon. 
 At each time step, the MPC algorithm solves an optimization problem to find the optimal control inputs, considering vehicle dynamics, constraints, and the desired trajectory.
 
 ### Key Features:
@@ -50,3 +50,9 @@ By anticipating future states and constraints, MPC offers enhanced path followin
 4. Design and implement the MPC framework, ensuring it considers vehicle constraints.
 5. Test the MPC in simulation for various scenarios and refine the model and controller parameters.
 6. Gradually deploy and evaluate the MPC in real-world tests, starting with low-complexity environments and escalating to more challenging scenarios.
+
+## References
+<ol>
+    <li id="ref1">Paden, Brian, et al. "A survey of motion planning and control techniques for self-driving urban vehicles." IEEE Transactions on intelligent vehicles 1.1 (2016): 33-55.</li>
+    <li id="ref2">Rajamani, Rajesh. "Vehicle dynamics and control." Springer Science & Business Media, 2011.</li>
+</ol>
