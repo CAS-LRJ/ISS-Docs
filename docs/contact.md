@@ -9,7 +9,7 @@ The Intelligent Software Systems (ISS) project is maintained by the [Trustworthy
 
 ## Key Contributors
 - [Renjue Li](https://tis.ios.ac.cn/?page_id=2265)
-- [Meilin Zhu](https:/www.ep1phany.com)
+- [Meilin Zhu](https://www.ep1phany.com)
 - Luo Cheng
 - Quanzhong Li
 - [Shaohang Han](https://sailorbrandon.github.io/)
