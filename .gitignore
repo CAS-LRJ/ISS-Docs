@@ -14,3 +14,7 @@ _site/
 .bundle/
 vendor/
 Gemfile.lock
+
+# Ignore backup files created by editors
+*.bak
+*~
