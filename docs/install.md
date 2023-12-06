@@ -7,7 +7,7 @@ nav_order: 1
 
 Intelligent Self-driving System (ISS) is a modular framework written in Python and C++ with the aim to build an extensible workspace tailored to research. This framework will contain both traditional and deep learning algorithms for self-driving related tasks such as perception, localization, mapping, prediction, planning, and control. The modular design with minimal dependency on external libraries can provide a transparent and clean workspace for researchers to evaluate algorithms for autonomous driving systems.
 
-The code of ISS can be downloaded from its [*Github Repository*](https://github.com/CAS-LRJ/ISS).
+The code of ISS can be downloaded from its [*Github Repository*](https://github.com/CAS-LRJ/ISS), where detailed installation instructions can be found.
 
 ## Dependencies
 
