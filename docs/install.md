@@ -21,7 +21,7 @@ Python libraries required by ISS.
 ```yaml
 carla=0.9.13
 cython=0.29.36
-lanelet2=1.2.1 (manylinux)
+lanelet2=1.2.1 #(only supported in Linux)
 networkx=3.1
 numpy=1.24.3
 open3d=0.17.0
@@ -30,7 +30,8 @@ pytorch=1.13.1
 scikit-learn=1.3.0
 pyyaml=6.0.1
 spconv-cu118=2.3.6
-open3d=0.17.0
+transforms3d=0.4.1
+shapely=2.0.2
 ```
 
 ### Optional Libraries
@@ -41,6 +42,8 @@ Optional packages that can be installed to improve ISS.
 matplotlib=3.5.3
 pandas=2.0.3
 dubins=1.0.1
+ipykernel=6.25.2
+ipywidgets=8.1.0
 commonroad-io=2022.3
 commonroad-route-planner=2022.3
 commonroad-scenario-designer=0.6.1
