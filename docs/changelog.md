@@ -2,6 +2,7 @@
 title: CHANGELOG
 layout: home
 nav_order: 1000
+nav_exclude: true
 ---
 ## Release v1.0.2alpha (Oct 20)
 
