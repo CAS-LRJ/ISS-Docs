@@ -7,7 +7,7 @@ nav_order: 10
 # Contact
 The Intelligent Software Systems (ISS) project is maintained by the [Trustworthy Intelligent Systems group](https://tis.ios.ac.cn/) at the Institute of Software, Chinese Academy of Sciences. ISS forms an integral part of the broader initiative, [Trustworthy Intelligent Systems for Automation](https://tis.ios.ac.cn/tisa/), led by Prof. [Lijun Zhang](https://tis.ios.ac.cn/?page_id=148). Some of the key contributors to ISS are listed below.
 
-# Technical Steering Committee
+## Technical Steering Committee
 - [Xiaowei Huang](https://cgi.csc.liv.ac.uk/~xiaowei/)
 - [Zhilin Wu](https://lcs.ios.ac.cn/~wuzl/index.html)
 - [Fu Song](https://songfu1983.github.io/)
