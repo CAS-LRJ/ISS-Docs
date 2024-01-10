@@ -1,8 +1,9 @@
 ---
 title: Planning
 layout: home
-nav_order: 6
+nav_order: 3
 has_children: true
+parent: Algorithms
 ---
 
 # Planning
@@ -13,7 +14,7 @@ Central to this pipeline is the "Planning module", responsible for making strate
 This module breaks down into three key stages: Route Planning, Behavior Planning, and Motion Planning, planning the movement of the vehicle at different levels of granularity and accuracy. 
 In this post, we will explore each stage in-depth.
 
-![kine_bicycle_model](../../assets/planning_pipeline.png){: .center-image width="100%"}
+![kine_bicycle_model](../../../assets/planning_pipeline.png){: .center-image width="100%"}
 
 *Pipeline of planning and control*
 {: .text-center}
@@ -24,7 +25,6 @@ In this post, we will explore each stage in-depth.
 ### Objective
 The task of route planning stage is to find the most effective course from the current location to the desired destination, much like how conventional GPS navigation systems operate. Modern route planning algorithms are able to return an optimal route on large scale in real time, after a one-time pre-processing step <a href="#ref1"><sup>[1]</sup></a>. For a more comprehensive survey, refer to the paper by Bast et al <a href="#ref2"><sup>[2]</sup></a>.
 
-In ISS, the route planning stage is implemented in the [lanelet planner]({% link docs/Planning/lanelet_planner.md %}).
 
 ### Inputs
 The route planning stage takes as input high-level information about the world, such as:
@@ -48,7 +48,7 @@ There are many challenges the road planning module has to take into consideratio
 ### Objective
 The main task of the behavior planning stage is to dictate the vehicle's overarching behavior, from decisions about lane switches, overtaking, yielding, to making turns. Nowadays, the behavior planning modules often incorporate the interaction between the ego vehicle and other agents on the road, such as other vehicles <a href="#ref3"><sup>[3]</sup></a>.
 
-In ISS, we implement the [lattice planner]({% link docs/Planning/frenet_lattice.md %}), which is a popular method for generating coarse trajectories in structured road environments.
+
 
 ### Inputs
 To achieve its goal, the behavior planning stage uses information from multiple sources, such as

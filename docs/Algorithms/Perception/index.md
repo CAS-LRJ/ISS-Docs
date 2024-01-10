@@ -1,7 +1,9 @@
 ---
 title: Perception
 layout: home
-nav_order: 3
+nav_order: 0
+parent: Algorithms
+
 ---
 
 # Perception
@@ -24,14 +26,14 @@ The different tasks supported by the ISS perception module allow our vehicles to
 
 - **2D Object Detection**: Recognizing and identifying objects in the vehicle's surroundings is crucial for safe navigation. Our framework utilizes cutting-edge algorithms to identify and classify various objects, such as pedestrians, vehicles, and signage, contributing to enhanced situational awareness.
 <video width="640" height="360" controls>
-  <source src="../../assets/perception/detection_pp_small.mp4" type="video/mp4">
+  <source src="../../../assets/perception/detection_pp_small.mp4" type="video/mp4">
 </video>
 {: .center-image }
 3D Obstacle Perception and 2D Object Detection
 {: .text-center}
 
 - **2D Semantic Segmentation**: Semantic segmentation is an essential task for understanding the environment in detail. We leverage state-of-the-art techniques to partition the scene into meaningful segments, enabling our vehicles to comprehend the road layout and better respond to complex urban landscapes.
-![ISS Architecture](../../assets/perception/segmentation.png){: .center-image }
+![ISS Architecture](../../../assets/perception/segmentation.png){: .center-image }
 
 - **Sensor-Based BEV Map Generation**: Our system generates a Bird's Eye View (BEV) map using sensor data, providing a holistic view of the vehicle's surroundings. This map serves as a valuable tool for path planning and decision-making, enhancing the vehicle's ability to navigate efficiently and safely.
 

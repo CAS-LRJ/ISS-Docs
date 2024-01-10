@@ -9,78 +9,36 @@ Intelligent Self-driving System (ISS) is a modular framework written in Python a
 
 The code of ISS can be downloaded from its [*Github Repository*](https://github.com/CAS-LRJ/ISS), where detailed installation instructions can be found.
 
-## Dependencies
+## Pre-requisites
 
-ISS is dependent on a minimal set of Python libraries; another set of recommended libraries can be optionally installed to improve its functionalities.
-Also, some examples will be written in Jupyter Notebook.
+ISS is tested with Ubuntu 20.04, running Python 3.8.
 
-### Minimal Dependencies
+For those interested in using ISS in conjunction with Gazebo and ROS-Noetic, you should install [ROS-Noetic](https://wiki.ros.org/noetic/Installation), following the instructions provided in the official ROS documentation.
 
-Python libraries required by ISS.
+To utilize ISS with CARLA, it is necessary to install CARLA. We recommend using version 0.9.13, which can be found at the [CARLA](https://github.com/carla-simulator/carla/releases) GitHub releases page.
 
-```yaml
-carla=0.9.13
-cython=0.29.36
-lanelet2=1.2.1 #(only supported in Linux)
-networkx=3.1
-numpy=1.24.3
-open3d=0.17.0
-opencv-python=4.8.0.76
-pytorch=1.13.1
-scikit-learn=1.3.0
-pyyaml=6.0.1
-spconv-cu118=2.3.6
-transforms3d=0.4.1
-shapely=2.0.2
+
+## Development Version
+To install the development version of ISS, please follow the instructions below.
 ```
-
-### Optional Libraries
-
-Optional packages that can be installed to improve ISS.
-
-```yaml
-matplotlib=3.5.3
-pandas=2.0.3
-dubins=1.0.1
-ipykernel=6.25.2
-ipywidgets=8.1.0
-commonroad-io=2022.3
-commonroad-route-planner=2022.3
-commonroad-scenario-designer=0.6.1
-commonroad-vehicle-models=3.0.2
+git clone https://github.com/CAS-LRJ/ISS.git
+cd ISS && python3 setup.py develop
 ```
 
 ## Build
-
-After cloning the [ISS repository](https://github.com/CAS-LRJ/ISS), run the following command to build the ISS framework:
-
-```bash
-python setup.py build_ext --inplace
+To build the ROS package of ISS, please follow the instructions below.
 ```
-
-We suggest using a virtual environment to avoid conflicts between the Python libraries installed for ISS and one installed system-wide, in particular in Windows systems. Virtual environments can be managed by using e.g. [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/). Cython 3.0 is currently not supported, so please use Cython version 0.29 instead. Cython versions 0.29.33 and 0.29.36 have been tested. For simulators' version control, we are currently using **CARLA 0.9.13** and **BeamNG 0.27.2.0**, therefore you should use **carla==0.9.13** and **beamngpy==1.25.1** in your virtual environment.
-
-**Caution**: If you are using a Windows system, Microsoft Visual C++ 14.0 or later is required. To compile this project locally, you should have *visual-cpp-build-tools* pre-installed.
+cd ISS/ros1_ws && catkin build
+source devel/setup.bash
+```
 
 ## Run tasks
-
-### CARLA Data Collector
-
-Run the following command to collect various kinds of sensor data from CARLA:
-
-```bash
-python run_carla.py
+If using Gazebo, simply do:
+```
+roslaunch robot_gazebo gazebo_demo.launch
 ```
 
-Make sure the CARLA 0.9.13 Server is running before starting `run_carla.py`. Data will be saved in `resources/data/carla`, which can be changed by modifying the environment variables `{RAW_DATA, DATASET}_PATH`.
-
-## Current Release
-
-## Release v1.0.1alpha (Oct 11)
-
-Major updates:
-
-- Add 3d detection & torch script wrapper
-- Add GNSS sensor data type
-- Add link of collected CARLA object detection dataset
-- Prepare for implementing EM Planner
+If using CARLA, please launch CARLA first, then do:
+```
+roslaunch carla_bridge carla_demo.launch
+```

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: CARLA Sensors
-parent: Sensors
-nav_order: 1
+# parent: Sensors
+# nav_order: 1
 ---
 
 # Sensors in CARLA<a name="Sensor"></a>

@@ -9,15 +9,15 @@ nav_order: 0
 Intelligent Self-driving System (ISS) is a modular framework written in Python and C++ with the aim to build an extensible workspace tailored to research. This framework will contain both traditional and deep learning algorithms for self-driving related tasks such as perception, localization, mapping, prediction, planning, and control. The modular design with minimal dependency on external libraries can provide a transparent and clean workspace for researchers to evaluate algorithms for autonomous driving systems.
 
 <p style="position: relative;">
-  <a href="https://carla.readthedocs.io/" style="position: absolute; left: 1.6%; width: 27.3%; top: 26.1%; height: 18.6%;"></a>
-  <a href="docs/SmallCar/" style="position: absolute; left: 1.6%; width: 27.3%; top: 53.0%; height: 30.3%;"></a>
-  <a href="docs/Sensors/" style="position: absolute; left: 26.3%; width: 8.2%; top: 3.7%; height: 49.4%;"></a>
-  <a href="docs/Perception/" style="position: absolute; left: 41.2%; width: 16.2%; top: 21.4%; height: 24.4%;"></a>
-  <a href="docs/Perception/" style="position: absolute; left: 41.2%; width: 16.2%; top: 50.4%; height: 12.9%;"></a>
-  <a href="docs/Localization/" style="position: absolute; left: 60.8%; width: 16.2%; top: 4.7%; height: 12.9%;"></a>
-  <a href="docs/Prediction/" style="position: absolute; left: 60.8%; width: 16.2%; top: 21.4%; height: 41.9%;"></a>
-  <a href="docs/Planning/" style="position: absolute; left: 80.2%; width: 16.2%; top: 4.7%; height: 12.9%;"></a>
-  <a href="docs/Control/" style="position: absolute; left: 80.2%; width: 16.2%; top: 21.4%; height: 41.9%;"></a>
+  <a href="docs/Platforms/CARLA/" style="position: absolute; left: 1.6%; width: 27.3%; top: 26.1%; height: 18.6%;"></a>
+  <a href="docs/Platforms/SmallCar/" style="position: absolute; left: 1.6%; width: 27.3%; top: 53.0%; height: 30.3%;"></a>
+  <!-- <a href="docs/Algorithms/Sensors/" style="position: absolute; left: 26.3%; width: 8.2%; top: 3.7%; height: 49.4%;"></a> -->
+  <a href="docs/Algorithms/Perception/" style="position: absolute; left: 41.2%; width: 16.2%; top: 21.4%; height: 24.4%;"></a>
+  <a href="docs/Algorithms/Perception/" style="position: absolute; left: 41.2%; width: 16.2%; top: 50.4%; height: 12.9%;"></a>
+  <a href="docs/Algorithms/Localization/" style="position: absolute; left: 60.8%; width: 16.2%; top: 4.7%; height: 12.9%;"></a>
+  <a href="docs/Algorithms/Prediction/" style="position: absolute; left: 60.8%; width: 16.2%; top: 21.4%; height: 41.9%;"></a>
+  <a href="docs/Algorithms/Planning/" style="position: absolute; left: 80.2%; width: 16.2%; top: 4.7%; height: 12.9%;"></a>
+  <a href="docs/Algorithms/Control/" style="position: absolute; left: 80.2%; width: 16.2%; top: 21.4%; height: 41.9%;"></a>
   <img class="center-image" style="display: block;" src="assets/ISS_Framework.png" alt="ISS Architecture">
 </p>
 

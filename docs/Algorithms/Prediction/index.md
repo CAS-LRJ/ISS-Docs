@@ -1,8 +1,10 @@
 ---
 title: Prediction
 layout: home
-nav_order: 8
+nav_order: 2
 math: katex
+parent: Algorithms
+
 ---
 
 # Prediction
@@ -25,7 +27,7 @@ Here, we forward simulate the kinematic bicycle model via the Runge-Kutta 4 (RK4
 - **Limitations**: in urban or crowded areas, this model may not capture erratic movements of the agents.
 
 ### Mathematical Model
-![kine_bicycle_model](../../assets/kine_bicycle_model.png){: .center-image width="50%"}
+![kine_bicycle_model](../../../assets/kine_bicycle_model.png){: .center-image width="50%"}
 
 *Kinematic bicycle model*
 {: .text-center}
@@ -65,7 +67,7 @@ In ISS, the constant velocity model is incorporated for motion forecasting in th
 ### Overview
 The Motion Transformer<a href="#ref2"><sup>[2]</sup></a> is a state-of-the-art model that considers historical data to predict future trajectories. This framework models the motion prediction as a joint optimization of global intention localization and local movement refinement. Apart from considering the global information of the road structures, this method also incorporates different motion modes by adapting learnable motion queries. The overal structure of the Motion Transformer is shown in the figure below.
 
-![motion_transformer](../../assets/motion_transformer.png){: .center-image }
+![motion_transformer](../../../assets/motion_transformer.png){: .center-image }
 
 *The structure of the motion transformer<a href="#ref2"><sup>[2]</sup></a>*
 {: .text-center}
