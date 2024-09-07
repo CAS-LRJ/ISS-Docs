@@ -25,7 +25,10 @@ git clone https://github.com/CAS-LRJ/ISS.git
 cd ISS && python3 setup.py develop
 ```
 
-We also provided a docker image with necessary dependencies installed, with Kasm Workspaces so that you can run ISS in the server and access it from your browser. To get access the docker image and init bash script, see [ISS_Docker](https://tis.ios.ac.cn/tisfiles/iss_docker/) for more information. 
+We also provided a docker image with necessary dependencies installed, with Kasm Workspaces so that you can run ISS in the server and access it from your browser. To get access the docker image and init bash script, see [ISS_Docker](https://tis.ios.ac.cn/tisfiles/iss_docker/) for more information. We also uploaded it onto [Docker Hub](https://hub.docker.com/repository/docker/ep11phany/iss-template/general), you can pull it to your local machine by running:
+```
+docker pull ep11phany/iss-template:v1
+```
 
 ## Build
 To build the ROS package of ISS, please follow the instructions below.
